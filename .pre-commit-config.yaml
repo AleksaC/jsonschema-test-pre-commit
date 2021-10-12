@@ -1,0 +1,25 @@
+- repo: https://github.com/AleksaC/jsonschema
+  rev: 0f98dc6
+  hooks:
+    - id: jsonschema-v2
+      files: |
+        (?x)(
+          ^valid.json$ |
+          ^invalid.json$
+        )
+      args: ["--schema", "schema.json"]
+
+    - id: jsonschema-v2
+      files: |
+        (?x)(
+          ^valid.json$
+        )
+      args: ["--schema", "schema.json"]
+
+    - id: jsonschema-v2
+      files: |
+        (?x)(
+          ^invalid.json$
+        )
+      args: ["--schema", "schema.json"]
+
